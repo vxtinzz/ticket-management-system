@@ -116,5 +116,5 @@ export async function deleteTicketById(id: string) {
         throw new Error("Ticket not found")
     }
 
-    return await ticketRepository.requestTicketDelete(id)
+    return await ticketRepository.deleteTicketById(id)
 }

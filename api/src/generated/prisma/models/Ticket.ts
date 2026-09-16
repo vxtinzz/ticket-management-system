@@ -33,7 +33,6 @@ export type TicketMinAggregateOutputType = {
   responsibleId: string | null
   createdAt: Date | null
   updatedAt: Date | null
-  deletedAt: Date | null
 }
 
 export type TicketMaxAggregateOutputType = {
@@ -45,7 +44,6 @@ export type TicketMaxAggregateOutputType = {
   responsibleId: string | null
   createdAt: Date | null
   updatedAt: Date | null
-  deletedAt: Date | null
 }
 
 export type TicketCountAggregateOutputType = {
@@ -57,7 +55,6 @@ export type TicketCountAggregateOutputType = {
   responsibleId: number
   createdAt: number
   updatedAt: number
-  deletedAt: number
   _all: number
 }
 
@@ -71,7 +68,6 @@ export type TicketMinAggregateInputType = {
   responsibleId?: true
   createdAt?: true
   updatedAt?: true
-  deletedAt?: true
 }
 
 export type TicketMaxAggregateInputType = {
@@ -83,7 +79,6 @@ export type TicketMaxAggregateInputType = {
   responsibleId?: true
   createdAt?: true
   updatedAt?: true
-  deletedAt?: true
 }
 
 export type TicketCountAggregateInputType = {
@@ -95,7 +90,6 @@ export type TicketCountAggregateInputType = {
   responsibleId?: true
   createdAt?: true
   updatedAt?: true
-  deletedAt?: true
   _all?: true
 }
 
@@ -180,7 +174,6 @@ export type TicketGroupByOutputType = {
   responsibleId: string
   createdAt: Date
   updatedAt: Date | null
-  deletedAt: Date | null
   _count: TicketCountAggregateOutputType | null
   _min: TicketMinAggregateOutputType | null
   _max: TicketMaxAggregateOutputType | null
@@ -213,7 +206,6 @@ export type TicketWhereInput = {
   responsibleId?: Prisma.StringFilter<"Ticket"> | string
   createdAt?: Prisma.DateTimeFilter<"Ticket"> | Date | string
   updatedAt?: Prisma.DateTimeNullableFilter<"Ticket"> | Date | string | null
-  deletedAt?: Prisma.DateTimeNullableFilter<"Ticket"> | Date | string | null
   responsible?: Prisma.XOR<Prisma.ResponsibleScalarRelationFilter, Prisma.ResponsibleWhereInput>
 }
 
@@ -226,7 +218,6 @@ export type TicketOrderByWithRelationInput = {
   responsibleId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  deletedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   responsible?: Prisma.ResponsibleOrderByWithRelationInput
 }
 
@@ -242,7 +233,6 @@ export type TicketWhereUniqueInput = Prisma.AtLeast<{
   responsibleId?: Prisma.StringFilter<"Ticket"> | string
   createdAt?: Prisma.DateTimeFilter<"Ticket"> | Date | string
   updatedAt?: Prisma.DateTimeNullableFilter<"Ticket"> | Date | string | null
-  deletedAt?: Prisma.DateTimeNullableFilter<"Ticket"> | Date | string | null
   responsible?: Prisma.XOR<Prisma.ResponsibleScalarRelationFilter, Prisma.ResponsibleWhereInput>
 }, "id">
 
@@ -255,7 +245,6 @@ export type TicketOrderByWithAggregationInput = {
   responsibleId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  deletedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   _count?: Prisma.TicketCountOrderByAggregateInput
   _max?: Prisma.TicketMaxOrderByAggregateInput
   _min?: Prisma.TicketMinOrderByAggregateInput
@@ -273,7 +262,6 @@ export type TicketScalarWhereWithAggregatesInput = {
   responsibleId?: Prisma.StringWithAggregatesFilter<"Ticket"> | string
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"Ticket"> | Date | string
   updatedAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Ticket"> | Date | string | null
-  deletedAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Ticket"> | Date | string | null
 }
 
 export type TicketCreateInput = {
@@ -284,7 +272,6 @@ export type TicketCreateInput = {
   status?: $Enums.TicketStatus
   createdAt?: Date | string
   updatedAt?: Date | string | null
-  deletedAt?: Date | string | null
   responsible: Prisma.ResponsibleCreateNestedOneWithoutTicketsInput
 }
 
@@ -297,7 +284,6 @@ export type TicketUncheckedCreateInput = {
   responsibleId: string
   createdAt?: Date | string
   updatedAt?: Date | string | null
-  deletedAt?: Date | string | null
 }
 
 export type TicketUpdateInput = {
@@ -308,7 +294,6 @@ export type TicketUpdateInput = {
   status?: Prisma.EnumTicketStatusFieldUpdateOperationsInput | $Enums.TicketStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   responsible?: Prisma.ResponsibleUpdateOneRequiredWithoutTicketsNestedInput
 }
 
@@ -321,7 +306,6 @@ export type TicketUncheckedUpdateInput = {
   responsibleId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
 }
 
 export type TicketCreateManyInput = {
@@ -333,7 +317,6 @@ export type TicketCreateManyInput = {
   responsibleId: string
   createdAt?: Date | string
   updatedAt?: Date | string | null
-  deletedAt?: Date | string | null
 }
 
 export type TicketUpdateManyMutationInput = {
@@ -344,7 +327,6 @@ export type TicketUpdateManyMutationInput = {
   status?: Prisma.EnumTicketStatusFieldUpdateOperationsInput | $Enums.TicketStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
 }
 
 export type TicketUncheckedUpdateManyInput = {
@@ -356,7 +338,6 @@ export type TicketUncheckedUpdateManyInput = {
   responsibleId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
 }
 
 export type TicketCountOrderByAggregateInput = {
@@ -368,7 +349,6 @@ export type TicketCountOrderByAggregateInput = {
   responsibleId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  deletedAt?: Prisma.SortOrder
 }
 
 export type TicketMaxOrderByAggregateInput = {
@@ -380,7 +360,6 @@ export type TicketMaxOrderByAggregateInput = {
   responsibleId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  deletedAt?: Prisma.SortOrder
 }
 
 export type TicketMinOrderByAggregateInput = {
@@ -392,7 +371,6 @@ export type TicketMinOrderByAggregateInput = {
   responsibleId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  deletedAt?: Prisma.SortOrder
 }
 
 export type TicketListRelationFilter = {
@@ -475,7 +453,6 @@ export type TicketCreateWithoutResponsibleInput = {
   status?: $Enums.TicketStatus
   createdAt?: Date | string
   updatedAt?: Date | string | null
-  deletedAt?: Date | string | null
 }
 
 export type TicketUncheckedCreateWithoutResponsibleInput = {
@@ -486,7 +463,6 @@ export type TicketUncheckedCreateWithoutResponsibleInput = {
   status?: $Enums.TicketStatus
   createdAt?: Date | string
   updatedAt?: Date | string | null
-  deletedAt?: Date | string | null
 }
 
 export type TicketCreateOrConnectWithoutResponsibleInput = {
@@ -526,7 +502,6 @@ export type TicketScalarWhereInput = {
   responsibleId?: Prisma.StringFilter<"Ticket"> | string
   createdAt?: Prisma.DateTimeFilter<"Ticket"> | Date | string
   updatedAt?: Prisma.DateTimeNullableFilter<"Ticket"> | Date | string | null
-  deletedAt?: Prisma.DateTimeNullableFilter<"Ticket"> | Date | string | null
 }
 
 export type TicketCreateManyResponsibleInput = {
@@ -537,7 +512,6 @@ export type TicketCreateManyResponsibleInput = {
   status?: $Enums.TicketStatus
   createdAt?: Date | string
   updatedAt?: Date | string | null
-  deletedAt?: Date | string | null
 }
 
 export type TicketUpdateWithoutResponsibleInput = {
@@ -548,7 +522,6 @@ export type TicketUpdateWithoutResponsibleInput = {
   status?: Prisma.EnumTicketStatusFieldUpdateOperationsInput | $Enums.TicketStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
 }
 
 export type TicketUncheckedUpdateWithoutResponsibleInput = {
@@ -559,7 +532,6 @@ export type TicketUncheckedUpdateWithoutResponsibleInput = {
   status?: Prisma.EnumTicketStatusFieldUpdateOperationsInput | $Enums.TicketStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
 }
 
 export type TicketUncheckedUpdateManyWithoutResponsibleInput = {
@@ -570,7 +542,6 @@ export type TicketUncheckedUpdateManyWithoutResponsibleInput = {
   status?: Prisma.EnumTicketStatusFieldUpdateOperationsInput | $Enums.TicketStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
 }
 
 
@@ -584,7 +555,6 @@ export type TicketSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs =
   responsibleId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  deletedAt?: boolean
   responsible?: boolean | Prisma.ResponsibleDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["ticket"]>
 
@@ -597,7 +567,6 @@ export type TicketSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extens
   responsibleId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  deletedAt?: boolean
   responsible?: boolean | Prisma.ResponsibleDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["ticket"]>
 
@@ -610,7 +579,6 @@ export type TicketSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extens
   responsibleId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  deletedAt?: boolean
   responsible?: boolean | Prisma.ResponsibleDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["ticket"]>
 
@@ -623,10 +591,9 @@ export type TicketSelectScalar = {
   responsibleId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  deletedAt?: boolean
 }
 
-export type TicketOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "title" | "description" | "priority" | "status" | "responsibleId" | "createdAt" | "updatedAt" | "deletedAt", ExtArgs["result"]["ticket"]>
+export type TicketOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "title" | "description" | "priority" | "status" | "responsibleId" | "createdAt" | "updatedAt", ExtArgs["result"]["ticket"]>
 export type TicketInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   responsible?: boolean | Prisma.ResponsibleDefaultArgs<ExtArgs>
 }
@@ -651,7 +618,6 @@ export type $TicketPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs
     responsibleId: string
     createdAt: Date
     updatedAt: Date | null
-    deletedAt: Date | null
   }, ExtArgs["result"]["ticket"]>
   composites: {}
 }
@@ -1084,7 +1050,6 @@ export interface TicketFieldRefs {
   readonly responsibleId: Prisma.FieldRef<"Ticket", 'String'>
   readonly createdAt: Prisma.FieldRef<"Ticket", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"Ticket", 'DateTime'>
-  readonly deletedAt: Prisma.FieldRef<"Ticket", 'DateTime'>
 }
     
 
