@@ -11,6 +11,13 @@ const titleSchema = z
   .min(3, "Title must have at least 3 characters")
   .max(100, "Title must have at most 100 characters");
 
+const searchSchema = z
+  .string()
+  .trim()
+  .min(1, "Search cannot be empty")
+  .max(100, "Search must have at most 100 characters")
+  .optional();  
+
 const descriptionSchema = z
   .string()
   .trim()
@@ -50,6 +57,7 @@ export const ticketIdSchema = z.object({
 });
 
 export const ticketPaginationSchema = z.object({
+  search: searchSchema,
   page: z.coerce
     .number()
     .int()

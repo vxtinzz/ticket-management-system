@@ -16,9 +16,9 @@ export async function addTicket(req: Request, res: Response) {
 export async function getTickets(req: Request, res: Response) {
   try {
     const limit = 10
-    const { page, sortBy, order } = validators.ticketPaginationSchema.parse(req.query)
+    const { page, sortBy, order, search } = validators.ticketPaginationSchema.parse(req.query)
 
-    const tickets = await ticketService.getAllTickets(page, limit, sortBy, order)
+    const tickets = await ticketService.getAllTickets(search, page, limit, sortBy, order)
     res.status(200).json({state: "sucess", message: "Tickets successfully retrieved", response: tickets})
   } catch (err:any) {
     res.status(400).json({state: "error", code: "GET_TICKETS_FAILED", message: err.message})
@@ -42,11 +42,12 @@ export async function getTicketById(req: Request, res: Response) {
 export async function getResponsibles(req: Request, res: Response) {
   try {
     const limit = 10
-    const { page, sortBy, order } = validators.ticketPaginationSchema.parse(req.query)
+    const { page, order } = validators.ticketPaginationSchema.parse(req.query)
 
-    const responsibles = await ticketService.getAllResponsibles(page, limit, sortBy, order)
+    const responsibles = await ticketService.getAllResponsibles(page, limit, order)
     res.status(200).json({state: "sucess", message: "Responsibles successfully retrieved", response: responsibles})
   } catch (err:any) {
+    console.log("teste")
     res.status(400).json({state: "error", code: "GET_RESPONSIBLES_FAILED", message: err.message})
   }
 }

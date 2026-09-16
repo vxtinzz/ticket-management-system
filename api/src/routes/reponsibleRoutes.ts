@@ -4,7 +4,7 @@ import { getResponsibles, getResponsibleById } from "../controllers/tickets.cont
 const router = Router()
 
 
-router.get("/responsible/", getResponsibles)
-router.get("/responsible/:id", getResponsibleById)
+router.get("/", getResponsibles)
+router.get("/:id", getResponsibleById)
 
 export default router

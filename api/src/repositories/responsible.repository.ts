@@ -1,12 +1,12 @@
 import prisma from "../config/prisma"
 
-export function findAll(page: number, limit: number, sortBy: string, order: string) {
+export function findAll(page: number, limit: number, order: "asc" | "desc") {
   return prisma.responsible.findMany({
     skip: (page - 1) * limit,
     take: limit,
     
     orderBy: {
-      [sortBy]: order
+      name: order
     }
   });
 }

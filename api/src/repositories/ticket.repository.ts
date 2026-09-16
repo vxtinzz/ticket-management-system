@@ -1,7 +1,8 @@
 import prisma from "../config/prisma"
 
-export function findAll(page: number, limit: number, sortBy: string, order: string) {
+export function findAll(search: string, page: number, limit: number, sortBy: string, order: string) {
   return prisma.ticket.findMany({
+    where: search? { title: { contains: search } } : undefined,
     skip: (page - 1) * limit,
     take: limit,
     

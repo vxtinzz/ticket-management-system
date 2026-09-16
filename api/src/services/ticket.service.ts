@@ -41,8 +41,8 @@ export async function addTicket(data: AddTicketData) {
   return ticket;
 }
 
-export async function getAllTickets(page: number, limit: number, sortBy: string, order: string) {
-  const ticketsData = await ticketRepository.findAll(page, limit, sortBy, order)
+export async function getAllTickets(search: any, page: number, limit: number, sortBy: string, order: string) {
+  const ticketsData = await ticketRepository.findAll(search, page, limit, sortBy, order)
   const totalTickets = await ticketRepository.countTickets()
 
   return {
@@ -66,8 +66,8 @@ export async function getTicketById(id: string) {
     return ticket;
 }
 
-export async function getAllResponsibles(page: number, limit: number, sortBy: string, order: string) {
-  const responsiblesData = await responsibleRepository.findAll(page, limit, sortBy, order)
+export async function getAllResponsibles(page: number, limit: number, order: "asc" | "desc") {
+  const responsiblesData = await responsibleRepository.findAll(page, limit, order)
   const totalresponsibles = await responsibleRepository.countResponsibles()
 
   return {
@@ -85,7 +85,7 @@ export async function getResponsibleById(id: string) {
     const responsible = await responsibleRepository.findById(id)
     
     if(!responsible){
-        throw new Error("Ticket not found")
+        throw new Error("Responsible not found")
     }
 
     return responsible;
