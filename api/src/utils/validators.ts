@@ -30,17 +30,6 @@ const statusSchema = z.enum([
   "CLOSED"
 ]);
 
-const responsibleNameSchema = z
-  .string()
-  .trim()
-  .min(2, "Responsible name must have at least 2 characters")
-  .max(100, "Responsible name must have at most 100 characters")
-  .regex(
-    /^[\p{L}\s'-]+$/u,
-    "Responsible name contains invalid characters"
-  );
-
-
 export const ticketCreateSchema = z.object({
   title: titleSchema,
   description: descriptionSchema,
@@ -59,10 +48,6 @@ export const ticketUpdateSchema = z.object({
 export const ticketIdSchema = z.object({
   id: idSchema
 });
-
-export const nameSchema = z.object({
-    name: responsibleNameSchema
-})
 
 export const ticketPaginationSchema = z.object({
   page: z.coerce
