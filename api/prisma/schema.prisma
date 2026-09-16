@@ -24,7 +24,7 @@ model Ticket{
 
 model Responsible {
   id      String   @id @default(uuid())
-  name    String
+  name    String   @unique
   tickets Ticket[]
 }
 

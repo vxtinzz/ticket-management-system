@@ -9,8 +9,8 @@
  * 🟢 You can import this file directly.
  */
 import type * as runtime from "@prisma/client/runtime/library"
-import type * as $Enums from "../enums"
-import type * as Prisma from "../internal/prismaNamespace"
+import type * as $Enums from "../enums.js"
+import type * as Prisma from "../internal/prismaNamespace.js"
 
 /**
  * Model Responsible
@@ -169,12 +169,12 @@ export type ResponsibleOrderByWithRelationInput = {
 
 export type ResponsibleWhereUniqueInput = Prisma.AtLeast<{
   id?: string
+  name?: string
   AND?: Prisma.ResponsibleWhereInput | Prisma.ResponsibleWhereInput[]
   OR?: Prisma.ResponsibleWhereInput[]
   NOT?: Prisma.ResponsibleWhereInput | Prisma.ResponsibleWhereInput[]
-  name?: Prisma.StringFilter<"Responsible"> | string
   tickets?: Prisma.TicketListRelationFilter
-}, "id">
+}, "id" | "name">
 
 export type ResponsibleOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
