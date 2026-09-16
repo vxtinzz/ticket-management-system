@@ -60,7 +60,7 @@ export const ticketIdSchema = z.object({
   id: idSchema
 });
 
-export const responsibleNameSchema = z.object({
+export const nameSchema = z.object({
     name: responsibleNameSchema
 })
 
