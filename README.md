@@ -7,6 +7,6 @@ Aplicação desenvolvida para um desafio técnico, com cadastro, edição, lista
 O projeto está dividido em backend e frontend. Consulte os respectivos guias para instalar as dependências, configurar o ambiente e executar cada parte:
 
 - [Backend — instalação e execução](api/README_backend.md)
-- [Frontend — instalação e execução](frontend/README.md)
+- [Frontend — instalação e execução](frontend/README_frontend.md)
 
 Comece pela configuração do backend e do banco de dados. Em seguida, configure o frontend e mantenha ambos em execução para utilizar o sistema completo.
