@@ -15,7 +15,7 @@ export function AppLayout({
       </a>
       <Sidebar activeItem={activeItem} />
       <div className="app-body">
-        <Header />
+        <Header/>
         <main id="main-content" className="main-content">
           {children}
         </main>
