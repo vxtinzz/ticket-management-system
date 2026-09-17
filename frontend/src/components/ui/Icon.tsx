@@ -21,7 +21,7 @@ export function Icon({
 }) {
   return (
     <img
-      src={`src/assets/${name}.${extensions[name] ?? "png"}`}
+      src={`/assets/${name}.${extensions[name] ?? "png"}`}
       alt=""
       aria-hidden="true"
       className={`icon ${className}`}

@@ -138,7 +138,7 @@ A API precisa permitir a origem da interface no CORS. Considere a porta efetivam
 
 ```bash
 npm run build
-npm run preview
+npm run preview OU npm run preview -- --port 5173 --strictPort
 ```
 
 O build verifica o TypeScript e gera os arquivos em `dist/`. O preview permite conferir esse resultado localmente; abra a URL informada pelo comando. A API deve continuar em execução.
