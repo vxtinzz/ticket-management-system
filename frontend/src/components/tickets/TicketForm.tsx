@@ -99,7 +99,7 @@ export function TicketForm({
           <Input
             autoFocus
             id="ticket-title"
-            label="Título *"
+            label={<>Título <span className="text-error-text">*</span></>}
             required
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -107,7 +107,7 @@ export function TicketForm({
           />
           <Textarea
             id="ticket-description"
-            label="Descrição *"
+            label={<>Descrição <span className="text-error-text">*</span></>}
             required
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -117,7 +117,7 @@ export function TicketForm({
           <div className="form-row">
             <Select
               id="ticket-priority"
-              label="Prioridade *"
+              label={<>Prioridade <span className="text-error-text">*</span></>}
               value={priority}
               onChange={(e) => setPriority(e.target.value as Priority)}
               options={priorityOptions}
@@ -125,7 +125,7 @@ export function TicketForm({
             {ticket ? (
               <Select
                 id="ticket-status"
-                label="Status *"
+                label={<>Status <span className="text-error-text">*</span></>}
                 value={status}
                 onChange={(e) => setStatus(e.target.value as TicketStatus)}
                 options={statusOptions}
@@ -133,7 +133,7 @@ export function TicketForm({
             ) : (
               <Select
                 id="ticket-responsible"
-                label="Responsável *"
+                label={<>Responsável <span className="text-error-text">*</span></>}
                 value={responsibleId}
                 onChange={(e) => setResponsibleId(e.target.value)}
                 options={options}

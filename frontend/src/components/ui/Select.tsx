@@ -1,4 +1,4 @@
-import type { SelectHTMLAttributes } from "react";
+import type { SelectHTMLAttributes, ReactNode } from "react";
 
 export interface SelectOption {
   value: string;
@@ -6,7 +6,7 @@ export interface SelectOption {
 }
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
-  label?: string;
+  label?: ReactNode;
   error?: string;
   options: SelectOption[];
   placeholder?: string;
