@@ -2,7 +2,7 @@
 
 API para cadastrar, consultar e acompanhar chamados internos, persistir os dados e distribuir atendimentos entre responsáveis.
 
-> Local deste documento no repositório: `api/README.md`. A instalação da interface está documentada no README da pasta `frontend/`.
+> Local deste documento no repositório: `api/README_backend.md`. A instalação da interface está documentada no README da pasta `frontend/`.
 
 ## Sobre o projeto
 
