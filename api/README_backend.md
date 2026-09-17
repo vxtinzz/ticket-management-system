@@ -64,8 +64,8 @@ O cliente Prisma informado no projeto está em `api/src/config/prisma.ts`, e o s
 - Opcionalmente, Postman ou Thunder Client para executar o roteiro manual da API.
 
 ```bash
-node --version v22.15.1
-npm --version 10.9.2
+node --version //v22.15.1
+npm --version //10.9.2
 ```
 
 O SQLite não exige a instalação de um servidor de banco separado para essa configuração.
