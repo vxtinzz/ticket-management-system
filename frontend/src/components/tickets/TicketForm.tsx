@@ -139,11 +139,12 @@ export function TicketForm({
                 options={options}
               />
             )}
+            
           </div>
           {ticket && (
             <Select
               id="ticket-responsible"
-              label="Responsável *"
+              label={<>Responsável <span className="text-error-text">*</span></>}
               required
               value={responsibleId}
               onChange={(e) => setResponsibleId(e.target.value)}
