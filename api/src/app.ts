@@ -1,16 +1,16 @@
 import express from "express";
 import ticketRoutes from "./routes/ticketRoutes"
 import responsibleRoutes from "./routes/reponsibleRoutes"
+import cors from "cors"
 
 
 const app = express();
-app.use(express.json({limit : "10kb"}))
+const FRONT_URL = process.env.FRONTEND_URL
 
-app.get("/health", (_req, res) => {
-  res.status(200).json({
-    status: "ok",
-  });
-});
+app.use(cors({
+    origin: FRONT_URL,
+  })
+);
 
 app.use(express.json({limit : "10kb"}))
 app.use("/tickets", ticketRoutes)
